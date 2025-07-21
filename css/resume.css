@@ -34,43 +34,48 @@ header {
 
 .logo {
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #ff9a8b;
+    font-weight: bold;
+    letter-spacing: 0.05em;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 1.08rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
     position: relative;
-    transition: color 0.3s;
+}
+
+nav a.active,
+nav a:hover {
+    background: #ff9a8b22;
+    color: #ff9a8b;
 }
 
 nav a::after {
     content: '';
-    position: absolute;
-    width: 0;
+    display: block;
     height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: #ff9a8b;
+    width: 0%;
+    background: #ff9a8b;
     transition: width 0.3s;
+    margin: 0 auto;
 }
 
-nav a:hover::after,
-nav a.active::after {
-    width: 100%;
-}
-
-nav a:hover,
-nav a.active {
-    color: #ff9a8b;
+nav a.active::after,
+nav a:hover::after {
+    width: 80%;
 }
 
 /* Intro section */
